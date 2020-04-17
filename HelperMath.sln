@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{CCE818DD-6A72-4806-9674-3E5DB269533D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bot", "Bot", "{E1A9433C-EA72-450E-B2B6-BE044E34AA9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{41C9869C-DD60-44C0-AA53-0DA77C999EA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{0179483B-3078-4CE0-B7C0-FC630F6CDEB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperMath.Bot", "Bot\HelperMath.Bot\HelperMath.Bot.csproj", "{7916CC1E-06FF-43F1-A0A6-B1109DC37500}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperMath.DataAccess", "DataAccess\HelperMath.DataAccess\HelperMath.DataAccess.csproj", "{5E6DB1E1-3FA5-437D-8AEC-91B6FA55425C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperMath.Domain", "Domain\HelperMath.Domain\HelperMath.Domain.csproj", "{6AABAB64-0259-4035-A55E-4C10E672D11F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelperMath.Web", "Web\HelperMath.Web\HelperMath.Web.csproj", "{21619F4C-C29B-4E1D-9422-978460D3219A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7916CC1E-06FF-43F1-A0A6-B1109DC37500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7916CC1E-06FF-43F1-A0A6-B1109DC37500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7916CC1E-06FF-43F1-A0A6-B1109DC37500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7916CC1E-06FF-43F1-A0A6-B1109DC37500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E6DB1E1-3FA5-437D-8AEC-91B6FA55425C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E6DB1E1-3FA5-437D-8AEC-91B6FA55425C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E6DB1E1-3FA5-437D-8AEC-91B6FA55425C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E6DB1E1-3FA5-437D-8AEC-91B6FA55425C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AABAB64-0259-4035-A55E-4C10E672D11F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AABAB64-0259-4035-A55E-4C10E672D11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AABAB64-0259-4035-A55E-4C10E672D11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AABAB64-0259-4035-A55E-4C10E672D11F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21619F4C-C29B-4E1D-9422-978460D3219A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21619F4C-C29B-4E1D-9422-978460D3219A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21619F4C-C29B-4E1D-9422-978460D3219A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21619F4C-C29B-4E1D-9422-978460D3219A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7916CC1E-06FF-43F1-A0A6-B1109DC37500} = {E1A9433C-EA72-450E-B2B6-BE044E34AA9D}
+		{5E6DB1E1-3FA5-437D-8AEC-91B6FA55425C} = {41C9869C-DD60-44C0-AA53-0DA77C999EA4}
+		{6AABAB64-0259-4035-A55E-4C10E672D11F} = {CCE818DD-6A72-4806-9674-3E5DB269533D}
+		{21619F4C-C29B-4E1D-9422-978460D3219A} = {0179483B-3078-4CE0-B7C0-FC630F6CDEB5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D10DE4C4-7139-48DF-9AD1-3830A400EDD1}
+	EndGlobalSection
+EndGlobal
