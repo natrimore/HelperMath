@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace HelperMath.Web
 {
@@ -30,8 +32,15 @@ namespace HelperMath.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-            
+            services.AddControllers()
+                    .AddNewtonsoftJson(options =>
+                        options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver()
+                    )
+                    .AddJsonOptions(o =>
+                    {
+                        o.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+                    });
+
             services.AddEntityFrameworkNpgsql().AddDbContext<DataContext>(options =>
             {
                 options.UseLazyLoadingProxies()
@@ -58,13 +67,13 @@ namespace HelperMath.Web
 
             app.UseRouting();
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapGet("/", async context =>
-            //    {
-            //        await context.Response.WriteAsync("Hello World!");
-            //    });
-            //});
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("Hello World!");
+                });
+            });
 
             app.UseEndpoints(endpoints =>
             {

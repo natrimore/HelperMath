@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
+using Telegram.Bot;
+using Telegram.Bot.Types;
 
 namespace HelperMath.Domain.Commands
 {
     public interface ICommand
     {
         bool Contains(string messageName);
-        Task Execute();
+        Task Execute(Message message, ITelegramBotClient client);
     }
 }

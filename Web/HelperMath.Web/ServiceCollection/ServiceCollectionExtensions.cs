@@ -13,12 +13,11 @@ namespace HelperMath.Web.ServiceCollection
         public static IServiceCollection AddTelegramBotClient(this IServiceCollection services, IConfiguration configuration)
         {
             var client = new TelegramBotClient(configuration["Token"]);
-            var webHook = $"{configuration["Url"]}/api/message/update";
+            var webHook = $"{configuration["Url"]}/api/bot/update";
 
             client.SetWebhookAsync(webHook).Wait();
 
             return services.AddTransient<ITelegramBotClient>(x => client);
-
         }
     }
 }
